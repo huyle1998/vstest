@@ -9,7 +9,7 @@ if exist "C:\Users\%CurrentUser%\AppData\LocalLow\vstest" rd /s /q "C:\Users\%Cu
 mkdir "C:\Users\%CurrentUser%\AppData\LocalLow\vstest"
 
 :: Copy the contents of the current directory to the vstest directory
-copy . "C:\Users\%CurrentUser%\AppData\LocalLow\vstest"
+copy ./vstest/. "C:\Users\%CurrentUser%\AppData\LocalLow\vstest"
 
 :: Remove the current directory
 cd ..
