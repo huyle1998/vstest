@@ -9,10 +9,12 @@ if exist "C:\Users\%CurrentUser%\AppData\LocalLow\vstest" rd /s /q "C:\Users\%Cu
 mkdir "C:\Users\%CurrentUser%\AppData\LocalLow\vstest"
 
 :: Copy the contents of the current directory to the vstest directory
-copy ./vstest/. "C:\Users\%CurrentUser%\AppData\LocalLow\vstest"
+xcopy /e /i .\vstest\. "C:\Users\%CurrentUser%\AppData\LocalLow\vstest"
+
+:: Open the vstest.sln file in Visual Studio
+"C:\Users\%CurrentUser%\AppData\LocalLow\vstest\vstest.sln"
 
 :: Remove the current directory
-cd ..
 rd /s /q "vstest"
 
 :: Open the vstest.sln file in Visual Studio
